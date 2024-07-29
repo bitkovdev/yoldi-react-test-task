@@ -1,0 +1,27 @@
+@import "@/app/styles/variables";
+
+.avatar {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 1px solid $strokesSecondaryColor;
+}
+
+.avatarDefault {
+  width: 50px;
+  height: 50px;
+  border: 1px solid $strokesSecondaryColor;
+  background: $bgSecondaryColor;
+  border-radius: 100%;
+
+  span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $txtColor;
+  }
+}

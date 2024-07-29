@@ -9,7 +9,7 @@ const nextConfig = {
         pathname: '/api/image/src/**',
       },
     ],
-  },
+  }
 };
 
 export default nextConfig;

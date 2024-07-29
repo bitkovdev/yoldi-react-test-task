@@ -1,9 +1,9 @@
 "use client"
 
-import { AppHeader } from "@/widgets/header"
+import { UsersListPage } from "@/pages/UsersListPage/ui/usersListPage"
 
 const Page = () => {
-  return <AppHeader onClickLogin={() => console.log("Login")} />
+  return <UsersListPage />
 }
 
 export default Page
