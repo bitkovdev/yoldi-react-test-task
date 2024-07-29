@@ -1,0 +1,42 @@
+$txtColor: #000000;
+$bgPrimaryColor: #FFFFFF;
+$bgSecondaryColor: #F3F3F3;
+$strokesPrimaryColor: #D4D4D4;
+$strokesSecondaryColor: #E6E6E6;
+$errorColor: #F00000;
+$grayColor: #838383;
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25.2px;
+}
+
+.paragraph {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.paragraph-mini {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+.button-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25.6px;
+}

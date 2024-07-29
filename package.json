@@ -2,6 +2,11 @@
   "name": "yoldi-react-test-task",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Ivan Bitkov",
+    "email": "mailbox@bitkov.dev",
+    "url": "https://bitkov.dev/"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,16 +14,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "effector": "^23.2.2",
+    "effector-react": "^23.2.1",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "eslint-config-next": "14.2.5",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "typescript": "^5"
   }
 }

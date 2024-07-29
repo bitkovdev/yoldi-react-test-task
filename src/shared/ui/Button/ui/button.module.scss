@@ -1,0 +1,56 @@
+@import "@/app/styles/variables";
+
+.primaryStyle {
+  padding: 12px 33px;
+  background: $txtColor;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border:  1px solid $txtColor;
+  transition: 350ms;
+  span {
+    color: $bgPrimaryColor;
+  }
+  &:focus {
+    border-color: $grayColor;
+  }
+  &:disabled {
+    border-color: $strokesPrimaryColor;
+    background: $strokesPrimaryColor;
+    cursor: not-allowed;
+    span {
+      color: $bgSecondaryColor;
+    }
+  }
+}
+
+.secondaryStyle {
+  padding: 7px 33px;
+  border:  1px solid $strokesPrimaryColor;
+  background: $bgPrimaryColor;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 350ms;
+  cursor: pointer;
+  span {
+    color: $txtColor;
+  }
+  &:hover {
+    border-color: $grayColor;
+  }
+  &:focus {
+    border-color: $grayColor;
+  }
+  &:disabled {
+    border-color: $strokesPrimaryColor;
+    background: $strokesPrimaryColor;
+    cursor: not-allowed;
+    span {
+      color: $bgSecondaryColor;
+    }
+  }
+}
