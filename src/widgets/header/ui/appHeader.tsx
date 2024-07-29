@@ -5,19 +5,21 @@ import styles from "./appHeader.module.scss"
 import clsx from "clsx"
 import { Button } from "@/shared/ui/Button"
 import { Avatar } from "@/shared/ui/Avatar/ui/avatar"
+import { useRouter } from "next/navigation"
 
 interface IAppHeaderProps {
-  onClickLogin?: () => void
   user?: {
     name: string
     avatarId?: string
   }
 }
 
-export const AppHeader = ({ onClickLogin, user }: IAppHeaderProps) => {
+export const AppHeader = ({ user }: IAppHeaderProps) => {
+  const router = useRouter()
+
   return (
     <div className={styles.container}>
-      <div className={styles.brand}>
+      <div className={styles.brand} onClick={() => router.push("/")}>
         <Image
           src="/yoldi-logo.svg"
           alt="Yoldi"
@@ -36,7 +38,11 @@ export const AppHeader = ({ onClickLogin, user }: IAppHeaderProps) => {
             <Avatar name={"d"} avatarId={""} />
           </div>
         ) : (
-          <Button onClick={onClickLogin} label="Войти" styleType="secondary" />
+          <Button
+            onClick={() => router.push("/login")}
+            label="Войти"
+            styleType="secondary"
+          />
         )}
       </div>
     </div>

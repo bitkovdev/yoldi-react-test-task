@@ -4,7 +4,7 @@ import { fetchGetUsers } from "@/shared/api/requests"
 import clsx from "clsx"
 import { Avatar } from "@/shared/ui/Avatar/ui/avatar"
 
-export const UsersListPage = () => {
+const UsersListPage = () => {
   const { data } = useSWR("/user GET", fetchGetUsers)
   return (
     <div className={styles.container}>
@@ -27,3 +27,5 @@ export const UsersListPage = () => {
     </div>
   )
 }
+
+export default UsersListPage

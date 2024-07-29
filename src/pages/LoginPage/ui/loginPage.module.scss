@@ -1,0 +1,63 @@
+@import "@/app/styles/variables";
+
+.mainContainer {
+  width: 100%;
+  height: calc(100vh - 152px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bgSecondaryColor;
+  transition: 350ms;
+}
+
+.card {
+  width: 400px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  background: $bgPrimaryColor;
+  box-sizing: border-box;
+  padding: 30px;
+  transition: 350ms;
+}
+
+.inputs {
+  display: flex;
+  gap: 15px;
+  padding: 0 5px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+}
+
+.footer {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerText {
+  color: $grayColor;
+}
+
+.footerLink {
+  color: $txtColor;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 450px) {
+  .mainContainer {
+    align-items: flex-start;
+    background: $bgPrimaryColor;
+  }
+  .card {
+    width: 100%;
+  }
+}

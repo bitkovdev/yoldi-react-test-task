@@ -1,6 +1,6 @@
 "use client"
 
-import { UsersListPage } from "@/pages/UsersListPage/ui/usersListPage"
+import UsersListPage from "@/pages/UsersListPage"
 
 const Page = () => {
   return <UsersListPage />
