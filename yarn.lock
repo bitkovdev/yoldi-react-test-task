@@ -698,12 +698,22 @@ eastasianwidth@^0.2.0:
   resolved "https://registry.yarnpkg.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
+effector-forms@^2.0.0-next.1:
+  version "2.0.0-next.1"
+  resolved "https://registry.yarnpkg.com/effector-forms/-/effector-forms-2.0.0-next.1.tgz#ab609c58b9e9a824b685a4d24d23e4798655e213"
+  integrity sha512-F5YNYOTIiF6NVMCdAlA1206NtjEivEoB6G8LPCPpxCukBJQfOvna0CUahL4tX+Czz8d6KlLWh5HZV+i2Aj+zJA==
+
 effector-react@^23.2.1:
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-23.2.1.tgz#ce772e07e5920d6b3d17c0e1997ff62227b4bcd6"
   integrity sha512-eyjHm095xgrDNe8wtF60w5AjaF+j4Z6XP/DxW8RvlCK4twQT5mkAbIBJxA7BXKLL74RpySai8QmjVBurzapBCw==
   dependencies:
     use-sync-external-store "^1.0.0"
+
+effector-storage@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/effector-storage/-/effector-storage-7.1.0.tgz#0efcf0a2c2c6b2f6f98c9faaead00d74a664e8a5"
+  integrity sha512-l5+RR48g7ZKUldElHnJSkzPwiMeyoO7D+C/xM6g4MVHpM9Waty8HMuIas+udSXYE1Tf9i8xm/AGBhdRrMm2FIA==
 
 effector@^23.2.2:
   version "23.2.2"

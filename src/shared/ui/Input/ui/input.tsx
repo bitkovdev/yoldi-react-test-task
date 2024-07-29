@@ -6,13 +6,23 @@ import { EyeSlashIcon, EyeSolidIcon } from "@/shared/svg"
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
   errorText?: string
+  error?: boolean
   icon?: React.ReactNode
   name: string
 }
 
 export const Input = (props: IInputProps) => {
-  const { label, errorText, disabled, className, name, icon, type, ...rest } =
-    props
+  const {
+    label,
+    errorText,
+    disabled,
+    error,
+    className,
+    name,
+    icon,
+    type,
+    ...rest
+  } = props
   const [hidePassword, setHidePassword] = useState<boolean>(true)
 
   return (
@@ -21,7 +31,7 @@ export const Input = (props: IInputProps) => {
       <label htmlFor={name}>
         <div
           data-disabled={disabled}
-          data-error={errorText !== undefined}
+          data-error={(errorText !== undefined && errorText !== "") || error}
           className={clsx(styles.inputContainer, className)}
         >
           {icon}

@@ -5,6 +5,7 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios"
 import { sharedConfigEnv } from "@/shared/config"
+import { TokenModel } from "@/entities/token"
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: `${sharedConfigEnv.API_URL}`,
@@ -22,6 +23,7 @@ const resHandler = (response: AxiosResponse) => {
 }
 
 const reqHandler = (config: InternalAxiosRequestConfig) => {
+  config.headers["X-API-KEY"] = TokenModel.$AccessToken.getState()
   return config
 }
 

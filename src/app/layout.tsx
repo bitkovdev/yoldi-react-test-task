@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./index.scss"
 import { AppHeader } from "@/widgets/header"
-
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {

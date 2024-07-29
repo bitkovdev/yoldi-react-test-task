@@ -9,7 +9,7 @@ export interface ProfileDto {
     width: string
     height: string
   }
-  cover: {
+  cover?: {
     id: string
     url: string
     width: string
@@ -17,5 +17,29 @@ export interface ProfileDto {
   }
 }
 
+export interface ApiKeyDto {
+  value: string
+}
+
 // request interfaces
 export interface RequestFetchGetUsers {}
+
+export interface RequestFetchLoginUser {
+  email: string
+  password: string
+}
+
+export interface RequestFetchSignUpUser {
+  email: string
+  name: string
+  password: string
+}
+
+export interface RequestFetchGetProfile {}
+
+// error interface
+export interface ErrorData {
+  statusCode: number
+  message: string
+  error: string
+}
