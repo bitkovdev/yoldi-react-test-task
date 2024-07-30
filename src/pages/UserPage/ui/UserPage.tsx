@@ -3,7 +3,7 @@ import { useParams, useRouter } from "next/navigation"
 import { useUnit } from "effector-react"
 import { ProfileModel } from "@/entities/profile"
 import useSWR from "swr"
-import { fetchGetProfileWithSlug } from "@/shared/api/requests"
+import { fetchGetProfile, fetchGetProfileWithSlug } from "@/shared/api/requests"
 import { ProfileBanner } from "@/shared/ui/ProfileBanner"
 import { useForm } from "effector-forms"
 import { UserPageForm } from "@/pages/UserPage/model"
@@ -12,6 +12,9 @@ import { Avatar } from "@/shared/ui/Avatar/ui/avatar"
 import { Button } from "@/shared/ui/Button"
 import { PenSolidIcon, SignOutIcon } from "@/shared/svg"
 import { TokenModel } from "@/entities/token"
+import { events } from "@/entities/modal"
+import { EditProfileModal } from "@/features/EditProfileModal"
+import { Modal } from "@/widgets/modal"
 
 const UserPage = () => {
   const params = useParams()
@@ -41,8 +44,31 @@ const UserPage = () => {
     }
   }, [data])
 
+  const handleEditProfile = () => {
+    events.openModal({
+      component: (
+        <EditProfileModal
+          valuesModal={{
+            name: values.name,
+            slug: values.slug,
+            description: values.description,
+          }}
+          onSubmit={async values => {
+            setForm(values)
+            submit()
+            if (params?.slug !== values.slug) {
+              await fetchGetProfile({})
+              router.push(`/user/${values.slug}`)
+            }
+          }}
+        />
+      ),
+    })
+  }
+
   return (
     <>
+      <Modal />
       <div className={styles.bannerContainer}>
         <ProfileBanner
           editable={isUserProfile}
@@ -80,6 +106,7 @@ const UserPage = () => {
           <h1 className={"title"}>{values.name}</h1>
           {isUserProfile && (
             <Button
+              onClick={() => handleEditProfile()}
               label="Редактировать"
               styleType={"secondary"}
               iconLeft={<PenSolidIcon />}
@@ -90,6 +117,7 @@ const UserPage = () => {
           <h3 className="paragraph">{values.email}</h3>
           {isUserProfile && (
             <Button
+              onClick={() => handleEditProfile()}
               label="Редактировать"
               styleType={"secondary"}
               iconLeft={<PenSolidIcon />}

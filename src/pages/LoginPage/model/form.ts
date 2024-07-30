@@ -35,4 +35,4 @@ export const $LoginFormFailData = restore(fetchLoginUser.failData, {
   statusCode: 0,
   error: "",
   message: "",
-})
+}).reset(fetchLoginUser.doneData)
