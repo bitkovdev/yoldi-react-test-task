@@ -3,7 +3,7 @@ import { Button } from "@/shared/ui/Button"
 import { Input } from "@/shared/ui/Input"
 import clsx from "clsx"
 import { useForm } from "effector-forms"
-import { EditProfileForm } from "@/features/EditProfileModal/model/form"
+import EditProfileForm from "@/features/EditProfileModal/model/form"
 import { events } from "@/entities/modal"
 import { useEffect } from "react"
 

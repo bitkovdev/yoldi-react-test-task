@@ -2,7 +2,7 @@ import { createForm, Form } from "effector-forms"
 import { sample } from "effector"
 import { fetchUpdateProfile } from "@/shared/api/requests"
 
-export const UserPageForm: Form<{
+const UserPageForm: Form<{
   slug: string
   coverId: string
   email: string
@@ -31,6 +31,8 @@ export const UserPageForm: Form<{
     },
   },
 })
+
+export default UserPageForm
 
 sample({
   clock: UserPageForm.submit,

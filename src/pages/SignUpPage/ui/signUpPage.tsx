@@ -9,7 +9,9 @@ import { useRouter } from "next/navigation"
 import { useUnit } from "effector-react"
 import { useEffect } from "react"
 import { TokenModel } from "@/entities/token"
-import { SignUpPageForm, $SignUpFormFailData } from "@/pages/SignUpPage/model"
+import SignUpPageForm, {
+  $SignUpFormFailData,
+} from "../../../entities/signUpPage"
 
 const SignUpPage = () => {
   const { fields, values, isValid, submit } = useForm(SignUpPageForm)

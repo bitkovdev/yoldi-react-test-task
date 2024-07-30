@@ -4,7 +4,7 @@ import { restore, sample } from "effector"
 import { fetchSignUpUser } from "@/shared/api/requests"
 import { TokenModel } from "@/entities/token"
 
-export const SignUpPageForm: Form<{
+const SignUpPageForm: Form<{
   email: string
   name: string
   password: string
@@ -25,6 +25,8 @@ export const SignUpPageForm: Form<{
   },
   validateOn: ["submit"],
 })
+
+export default SignUpPageForm
 
 sample({
   clock: SignUpPageForm.submit,

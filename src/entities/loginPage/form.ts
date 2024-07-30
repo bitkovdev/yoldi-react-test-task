@@ -4,7 +4,7 @@ import { restore, sample } from "effector"
 import { fetchLoginUser } from "@/shared/api/requests"
 import { TokenModel } from "@/entities/token"
 
-export const LoginPageForm = createForm({
+const LoginPageForm = createForm({
   fields: {
     email: {
       init: "",
@@ -17,6 +17,8 @@ export const LoginPageForm = createForm({
   },
   validateOn: ["submit"],
 })
+
+export default LoginPageForm
 
 sample({
   clock: LoginPageForm.submit,

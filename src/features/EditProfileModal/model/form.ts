@@ -1,7 +1,7 @@
 import { createForm } from "effector-forms"
 import { RequiredValidator } from "@/shared/lib/validators"
 
-export const EditProfileForm = createForm({
+const EditProfileForm = createForm({
   fields: {
     name: {
       init: "",
@@ -17,3 +17,5 @@ export const EditProfileForm = createForm({
   },
   validateOn: ["submit", "change"],
 })
+
+export default EditProfileForm
