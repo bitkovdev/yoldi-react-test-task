@@ -14,7 +14,6 @@ import { PenSolidIcon, SignOutIcon } from "@/shared/svg"
 import { TokenModel } from "@/entities/token"
 import { events } from "@/entities/modal"
 import { EditProfileModal } from "@/features/EditProfileModal"
-import { Modal } from "@/widgets/modal"
 
 const UserPage = () => {
   const params = useParams()
@@ -68,7 +67,6 @@ const UserPage = () => {
 
   return (
     <>
-      <Modal />
       <div className={styles.bannerContainer}>
         <ProfileBanner
           editable={isUserProfile}
@@ -87,10 +85,6 @@ const UserPage = () => {
             <Avatar
               name={values.name}
               editable={isUserProfile}
-              onRemove={() => {
-                fields.imageId.onChange("")
-                submit()
-              }}
               onChangeImage={imageId => {
                 fields.imageId.onChange(imageId)
                 submit()

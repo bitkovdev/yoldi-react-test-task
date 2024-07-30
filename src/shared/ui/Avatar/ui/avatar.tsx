@@ -39,39 +39,41 @@ export const Avatar = ({
     }
   }
   return (
-    <div className={sizeStyle[size]} data-editable={editable}>
-      {editable && (
-        <div
-          className={styles.changeButton}
-          onClick={() =>
-            avatarId
-              ? onRemove
-                ? onRemove()
+    <div>
+      <div className={sizeStyle[size]} data-editable={editable}>
+        {editable && (
+          <div
+            className={styles.changeButton}
+            onClick={() =>
+              avatarId
+                ? onRemove
+                  ? onRemove()
+                  : ref?.current?.click()
                 : ref?.current?.click()
-              : ref?.current?.click()
-          }
-        >
-          <input
-            className={styles.input}
-            onChange={fileChosen}
-            ref={ref}
-            type="file"
-            accept="image/png, image/jpeg, image/jpg"
+            }
+          >
+            <input
+              className={styles.input}
+              onChange={fileChosen}
+              ref={ref}
+              type="file"
+              accept="image/png, image/jpeg, image/jpg"
+            />
+            <CameraSolidIcon />
+          </div>
+        )}
+        {avatarId ? (
+          <Image
+            src={IMAGE_URL + avatarId}
+            alt={name}
+            className={styles.avatar}
+            width={size === "medium" ? 50 : 100}
+            height={size === "medium" ? 50 : 100}
           />
-          <CameraSolidIcon />
-        </div>
-      )}
-      {avatarId ? (
-        <Image
-          src={IMAGE_URL + avatarId}
-          alt={name}
-          className={styles.avatar}
-          width={size === "medium" ? 50 : 100}
-          height={size === "medium" ? 50 : 100}
-        />
-      ) : (
-        <span className="subtitle">{name.charAt(0)}</span>
-      )}
+        ) : (
+          <span className="subtitle">{name.charAt(0)}</span>
+        )}
+      </div>{" "}
     </div>
   )
 }

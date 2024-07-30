@@ -1,3 +1,5 @@
+"use client"
+
 import { useUnit } from "effector-react"
 import { CSSTransition } from "react-transition-group"
 import React, { useEffect, useRef, useState } from "react"
