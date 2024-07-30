@@ -1,0 +1,45 @@
+@import "@/app/styles/variables";
+
+.container {
+  position: relative;
+  &[data-editable="true"] {
+    &:hover {
+     .bannerImageUpload {
+       opacity: 1;
+     }
+    }
+  }
+}
+
+.bannerImageUpload {
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: 350ms;
+}
+
+.button {
+  padding: 7px 22px !important;
+}
+
+.input {
+  display: none;
+}
+
+.bannerImage {
+  width: 100vw;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bannerImageEmpty {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  background: $strokesSecondaryColor;
+}

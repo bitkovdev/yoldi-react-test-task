@@ -38,7 +38,10 @@ export const AppHeader = () => {
         </p>
       </div>
       {profileData.name ? (
-        <div className={styles.userInfoContent}>
+        <div
+          className={styles.userInfoContent}
+          onClick={() => router.push(`/user/${profileData.slug}`)}
+        >
           <h3 className={clsx("paragraph", styles.userName)}>
             {profileData.name}
           </h3>

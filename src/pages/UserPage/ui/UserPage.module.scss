@@ -1,0 +1,68 @@
+@import "@/app/styles/variables";
+.bannerContainer {
+  position: relative;
+}
+
+.wrapperAvatar {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  height: 0;
+}
+
+.avatarContainer {
+  position: absolute;
+  bottom: -50px;
+}
+
+.wrapper {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 85px 30px 100px 30px;
+  box-sizing: border-box;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.userInfo {
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  button {
+    display: none;
+  }
+  h3 {
+    color: $grayColor;
+  }
+}
+
+.exitButton {
+  margin-top: 60px;
+}
+
+@media (max-width: 500px) {
+  .nameContainer {
+    button {
+      display: none;
+    }
+  }
+  .userInfo {
+    gap: 10px;
+    button {
+      display: flex;
+      width: fit-content;
+    }
+    p {
+      padding-top: 20px;
+    }
+  }
+  }

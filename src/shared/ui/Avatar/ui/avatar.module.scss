@@ -1,20 +1,19 @@
 @import "@/app/styles/variables";
 
 .avatar {
-  width: 50px;
   min-width: 50px;
-  height: 50px;
   border-radius: 100%;
   object-fit: cover;
-  border: 1px solid $strokesSecondaryColor;
 }
 
 .avatarDefault {
   width: 50px;
   height: 50px;
+  position: relative;
   border: 1px solid $strokesSecondaryColor;
   background: $bgSecondaryColor;
   border-radius: 100%;
+  overflow: hidden;
 
   span {
     width: 50px;
@@ -24,4 +23,65 @@
     justify-content: center;
     color: $txtColor;
   }
+  &[data-editable="true"] {
+    &:hover {
+      .changeButton {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.avatarLarge {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 1px solid $strokesSecondaryColor;
+  background: $bgSecondaryColor;
+  border-radius: 100%;
+  overflow: hidden;
+
+  span {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    font-size: 36px;
+    line-height: 50.4px;
+    align-items: center;
+    justify-content: center;
+    color: $txtColor;
+  }
+  &[data-editable="true"] {
+    &:hover {
+      .changeButton {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.changeButton {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: $txtColor;
+  opacity: 0;
+  transition: 350ms;
+  cursor: pointer;
+  svg {
+    width: 50px;
+    height: 50px;
+    path {
+      fill: $bgPrimaryColor;
+    }
+  }
+}
+
+.input {
+  display: none;
 }
