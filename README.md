@@ -1,4 +1,4 @@
-# Тестовое задание на позицию React (Next.js) разработчика в компанию [Yoldi](https://yoldi.agency/)
+# Тестовое задание на позицию React (Next.js) разработчика в компанию [Yoldi](https://yoldi.agency/) ([Онлайн-демо](https://yoldi-bitkov.vercel.app/))
 
 ![Repository cover](/readme/cover.png)
 
